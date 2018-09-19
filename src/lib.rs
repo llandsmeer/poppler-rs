@@ -97,11 +97,11 @@ impl PopplerPage {
         (width, height)
     }
 
-    pub fn render(&self, ctx: &mut cairo::Context) {
+    pub fn render(&self, ctx: &cairo::Context) {
         unsafe { ffi::poppler_page_render(self.0, ctx.to_raw_none()) }
     }
 
-    pub fn render_for_printing(&self, ctx: &mut cairo::Context) {
+    pub fn render_for_printing(&self, ctx: &cairo::Context) {
         unsafe { ffi::poppler_page_render_for_printing(self.0, ctx.to_raw_none()) }
     }
 
